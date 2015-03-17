@@ -1,7 +1,22 @@
 {
-  "name": "cldr",
-  "bin": "cldr.js",
+  "name": "cldr-openui5",
+  "description": "Converts the original CLDR JSON package to the OpenUI5 format",
+  "bin": {
+    "cldr": "cldr.js"
+  },
   "main": "./lib/index.js",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jiawei Cao",
+    "email": "stopcoder@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stopcoder/cldr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stopcoder/cldr/issues"
+  },
   "dependencies": {
     "adm-zip": "^0.4.7",
     "async": "^0.9.0",
