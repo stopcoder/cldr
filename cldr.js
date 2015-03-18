@@ -12,8 +12,17 @@ var argv = require("yargs")
 			.argv,
 		cldr = require("./lib/index.js");
 
+console.log("Starting extracting necessary files from", argv.z);
+
 cldr({
 	zip: argv.z,
 	tmp: argv.t,
 	output: argv.o
+}).start().on("filesExtracted", function() {
+	console.log("Files extracted, now start generating the UI5 JSON files and write to foler", argv.o);
+}).on("filesGenerated", function() {
+	console.log("UI5 JSON files generated");
+}).on("tempFolderDeleted", function() {
+	console.log("TEMP folder deleted");
 });
+
